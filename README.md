@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-![My try 😁](./design/my-try.png.jpg)
+![My try 😁](./design/my-try.png)
 
 ### Links
 
