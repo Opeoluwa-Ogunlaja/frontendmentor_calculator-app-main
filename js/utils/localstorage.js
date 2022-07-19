@@ -16,18 +16,20 @@ localStorage.setItem = function(key, value) {
 
 export const initStorage = () => {
     const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const theme = localStorage.getItem("theme");
+    let theme = localStorage.getItem("theme");
     if (!dark) {
         if (theme === null) {
             setThemeStore(1)
             setTheme(theme);
-            return;
         }
+        theme = localStorage.getItem("theme");
+        setThemeStore(theme);
         setTheme(theme);
         return;
     }
     else{
         setThemeStore(3)
+        theme = localStorage.getItem("theme");
         setTheme(theme);
         return;
     }
