@@ -1,0 +1,16 @@
+.keypad{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+
+    button{
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    @include mobile{
+        padding: 2.5rem 1rem;
+        gap: .75rem;
+    }
+}

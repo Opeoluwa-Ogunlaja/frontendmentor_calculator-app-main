@@ -1,0 +1,385 @@
+.grid {
+  display: grid;
+}
+
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "League Spartan";
+  font-weight: 700;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+  position: absolute;
+  inset: auto 0 0 0;
+  margin-bottom: 0.25rem;
+  z-index: 5000;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+button, input {
+  outline: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (max-width: 600px) {
+  main {
+    width: 90%;
+  }
+}
+
+.keypad {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+}
+.keypad button {
+  text-transform: uppercase;
+  display: inline-block;
+}
+@media screen and (max-width: 600px) {
+  .keypad {
+    padding: 2.5rem 1rem;
+    gap: 0.75rem;
+  }
+}
+
+.key {
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.key.num {
+  font-size: 32px;
+}
+@media screen and (max-width: 600px) {
+  .key {
+    padding: 1rem 0.1rem;
+  }
+}
+.key.action-key, .key.eval-key {
+  font-size: 1.25rem;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}
+header h3.title {
+  margin-right: auto;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+@media screen and (max-width: 600px) {
+  header h3.title {
+    font-size: 2.5rem;
+  }
+}
+header small {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+}
+@media screen and (max-width: 600px) {
+  header small {
+    font-size: 1rem;
+  }
+}
+
+.toggle-container {
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.toggle-container span {
+  text-align: center;
+  width: 100%;
+}
+
+.toggler-labels {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.25rem;
+}
+
+.toggler {
+  --width: 4.5rem;
+  --height: calc(var(--width) / 3);
+  --border-radius: calc(var(--height) / 2);
+  display: inline-block;
+  cursor: pointer;
+}
+.toggler .toggler-btn {
+  border: none;
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+}
+.toggler .toggler-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: calc(var(--height) * 0.2);
+  margin-left: 0.25rem;
+  background-color: black;
+  height: calc(var(--height) / 1.5);
+  width: calc(var(--height) / 1.5);
+  border-radius: var(--border-radius);
+  transition: transform 0.2s;
+}
+
+.screen {
+  width: 100%;
+  pointer-events: none;
+  text-align: right;
+  vertical-align: middle;
+  font-size: 2.25rem;
+  border: none;
+  padding: 1.25rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.theme1 body {
+  background-color: hsl(222deg, 26%, 31%);
+}
+
+.theme1 .attribution {
+  color: white;
+}
+.theme1 .attribution a {
+  color: hsl(30deg, 25%, 89%);
+}
+
+.theme1 header h3.title, .theme1 header small {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.theme1 .toggler-labels {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.theme1 .screen {
+  background-color: hsl(224deg, 36%, 15%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.theme1 .keypad {
+  background-color: hsl(223deg, 31%, 20%);
+}
+
+.theme1 .toggler-btn {
+  background-color: hsl(223deg, 31%, 20%);
+}
+.theme1 .toggler-btn:hover::after {
+  background-color: #e38c82;
+}
+
+.theme1 .toggler-btn::after {
+  transform: translateX(0%);
+  background-color: hsl(6deg, 63%, 50%);
+}
+
+.theme1 .key {
+  background-color: hsl(30deg, 25%, 89%);
+  box-shadow: 0 0.25rem 0 hsl(28deg, 16%, 65%);
+  color: hsl(221deg, 14%, 31%);
+}
+.theme1 .key:hover {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.theme1 .action-key {
+  background-color: hsl(225deg, 21%, 49%);
+  box-shadow: 0 0.25rem 0 hsl(224deg, 28%, 35%);
+  color: hsl(0deg, 0%, 100%);
+}
+.theme1 .action-key:hover {
+  background-color: #a2afd8;
+}
+
+.theme1 .eval-key {
+  background-color: hsl(6deg, 63%, 50%);
+  box-shadow: 0 0.25rem 0 hsl(6deg, 70%, 34%);
+  color: hsl(0deg, 0%, 100%);
+}
+.theme1 .eval-key:hover {
+  background-color: #e35d4f;
+}
+
+.theme2 body {
+  background-color: hsl(0deg, 0%, 90%);
+}
+
+.theme2 .attribution {
+  color: hsl(60deg, 10%, 19%);
+}
+.theme2 .attribution a {
+  color: hsl(25deg, 98%, 40%);
+}
+
+.theme2 header h3.title, .theme2 header small {
+  color: hsl(60deg, 10%, 19%);
+}
+
+.theme2 .toggler-labels {
+  color: hsl(60deg, 10%, 19%);
+}
+
+.theme2 .screen {
+  background-color: hsl(0deg, 0%, 93%);
+  color: hsl(60deg, 10%, 19%);
+}
+
+.theme2 .keypad {
+  background-color: hsl(0deg, 5%, 81%);
+}
+
+.theme2 .toggler-btn {
+  background-color: hsl(0deg, 5%, 81%);
+}
+.theme2 .toggler-btn:hover::after {
+  background-color: #fd8835;
+}
+
+.theme2 .toggler-btn::after {
+  transform: translateX(150%);
+  background-color: hsl(25deg, 98%, 40%);
+}
+
+.theme2 .key {
+  background-color: hsl(45deg, 7%, 89%);
+  box-shadow: 0 0.25rem 0 hsl(35deg, 11%, 61%);
+  color: hsl(60deg, 10%, 19%);
+}
+.theme2 .key:hover {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.theme2 .action-key {
+  background-color: hsl(185deg, 42%, 37%);
+  box-shadow: 0 0.25rem 0 hsl(185deg, 58%, 25%);
+  color: hsl(0deg, 0%, 100%);
+}
+.theme2 .action-key:hover {
+  background-color: #75c0c7;
+}
+
+.theme2 .eval-key {
+  background-color: hsl(25deg, 98%, 40%);
+  box-shadow: 0 0.25rem 0 hsl(25deg, 99%, 27%);
+  color: hsl(0deg, 0%, 100%);
+}
+.theme2 .eval-key:hover {
+  background-color: #fd8835;
+}
+
+.theme3 body {
+  background-color: hsl(268deg, 75%, 9%);
+}
+
+.theme3 .attribution {
+  color: white;
+}
+.theme3 .attribution a {
+  color: hsl(176deg, 100%, 44%);
+}
+
+.theme3 header h3.title, .theme3 header small {
+  color: hsl(52deg, 100%, 62%);
+}
+
+.theme3 .toggler-labels {
+  color: hsl(52deg, 100%, 62%);
+}
+
+.theme3 .screen {
+  background-color: hsl(268deg, 71%, 12%);
+  color: hsl(52deg, 100%, 62%);
+}
+
+.theme3 .keypad {
+  background-color: hsl(268deg, 71%, 12%);
+}
+
+.theme3 .toggler-btn {
+  background-color: hsl(268deg, 71%, 12%);
+}
+.theme3 .toggler-btn:hover::after {
+  background-color: #47fff3;
+}
+
+.theme3 .toggler-btn::after {
+  transform: translateX(300%);
+  background-color: hsl(176deg, 100%, 44%);
+}
+
+.theme3 .key {
+  background-color: hsl(268deg, 47%, 21%);
+  box-shadow: 0 0.25rem 0 hsl(290deg, 70%, 36%);
+  color: hsl(52deg, 100%, 62%);
+}
+.theme3 .key:hover {
+  background-color: #672aac;
+}
+
+.theme3 .action-key {
+  background-color: hsl(281deg, 89%, 26%);
+  box-shadow: 0 0.25rem 0 hsl(285deg, 91%, 52%);
+  color: hsl(0deg, 0%, 100%);
+}
+.theme3 .action-key:hover {
+  background-color: #9c0dde;
+}
+
+.theme3 .eval-key {
+  background-color: hsl(176deg, 100%, 44%);
+  box-shadow: 0 0.25rem 0 hsl(177deg, 92%, 70%);
+  color: hsl(198deg, 20%, 13%);
+}
+.theme3 .eval-key:hover {
+  background-color: #61fff4;
+}
+
+@media (prefers-reduced-motion) {
+  *, *::after, *::before {
+    transition-duration: 1ms !important;
+    transition-timing-function: unset !important;
+    transition-delay: 1ms !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

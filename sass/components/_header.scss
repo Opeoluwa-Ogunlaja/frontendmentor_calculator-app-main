@@ -1,0 +1,74 @@
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 2.5rem;
+    margin-bottom: 1rem;
+
+    h3.title{
+        margin-right: auto;
+        font-size: 1.5rem;
+        text-transform: lowercase;
+
+        @include mobile{
+            font-size: 2.5rem;
+        }
+    }
+
+    small{
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: .75rem;
+
+        @include mobile{
+            font-size: 1rem;
+        }
+    }
+}
+
+.toggle-container{
+    display: flex;
+    place-content: center;
+    place-items: center;
+
+    span{
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.toggler-labels{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: .25rem;
+}
+
+.toggler{
+    --width: 4.5rem;
+    --height: calc(var(--width) / 3);
+    --border-radius: calc(var(--height) / 2);
+    display: inline-block;
+    cursor: pointer;
+
+    .toggler-btn{
+        border: none;
+        position: relative;
+        width: var(--width);
+        height: var(--height);
+        border-radius: var(--border-radius);
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: calc(var(--height) * (20/100));
+            margin-left: .25rem;
+            background-color: black;
+            height: calc(var(--height) / 1.5);
+            width: calc(var(--height) / 1.5);
+            border-radius: var(--border-radius);
+            transition: transform 0.2s;
+        }
+    }
+}

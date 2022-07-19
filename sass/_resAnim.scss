@@ -1,0 +1,7 @@
+*, *::after, *::before{
+    @media (prefers-reduced-motion){
+        transition-duration: 1ms !important;
+        transition-timing-function: unset !important;
+        transition-delay: 1ms !important;
+    }
+}

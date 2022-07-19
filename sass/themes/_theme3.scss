@@ -1,0 +1,74 @@
+.theme3 body{
+    background-color: value($theme3, 'main-background');
+}
+
+.theme3 .attribution {
+    color: white;
+
+    a{
+        color: value($theme3, 'eval-key-toggle-bg');
+    }
+}
+
+.theme3 header{
+    h3.title, small{
+        color: value($theme3, 'text-light');
+    }
+}
+
+.theme3 .toggler-labels{
+    color: value($theme3, 'text-light');
+}
+
+.theme3 .screen{
+    background-color: value($theme3, 'screen-bg');
+    color: value($theme3, 'text-light');
+}
+
+.theme3 .keypad{
+    background-color: value($theme3, 'toggle-keypad-bg');
+}
+
+.theme3 .toggler-btn{
+    background-color: value($theme3, 'toggle-keypad-bg');
+    &:hover{
+        &::after{
+            background-color: lighten($color: value($theme3, 'eval-key-toggle-bg'), $amount: 20);
+        }
+    }
+}
+
+.theme3 .toggler-btn::after{
+    transform: translateX(300%);
+    background-color: value($theme3, 'eval-key-toggle-bg');
+}
+
+.theme3 .key{
+    background-color: value($theme3, 'key-bg');
+    box-shadow: 0 .25rem 0 value($theme3, 'key-shadow');
+    color: value($theme3, 'text-light');
+
+    &:hover{
+        background-color: lighten($color: desaturate($color: value($theme3, 'toggle-keypad-bg'), $amount: 10), $amount: 30);
+    }
+}
+
+.theme3 .action-key{
+    background-color: value($theme3, 'act-key-bg');
+    box-shadow: 0 .25rem 0 value($theme3, 'act-key-shadow');
+    color: value($theme3, 'text-white');
+
+    &:hover{
+        background-color: lighten($color: value($theme3, 'act-key-bg'), $amount: 20);
+    }
+}
+
+.theme3 .eval-key{
+    background-color: value($theme3, 'eval-key-toggle-bg');
+    box-shadow: 0 .25rem 0 value($theme3, 'eval-key-toggle-shadow');
+    color: value($theme3, 'text-dark');
+
+    &:hover{
+        background-color: lighten($color: value($theme3, 'eval-key-toggle-bg'), $amount: 25);
+    }
+}

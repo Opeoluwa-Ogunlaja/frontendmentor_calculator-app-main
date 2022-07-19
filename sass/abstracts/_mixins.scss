@@ -1,0 +1,9 @@
+@function value($array, $key){
+    @return map-get($map: $array, $key: $key)
+}
+
+@mixin mobile {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}

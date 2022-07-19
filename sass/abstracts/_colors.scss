@@ -1,0 +1,42 @@
+$theme1: (
+    main-background: hsl(222, 26%, 31%),
+    toggle-keypad-bg: hsl(223, 31%, 20%),
+    screen-bg: hsl(224, 36%, 15%),
+    act-key-bg: hsl(225, 21%, 49%),
+    act-key-shadow: hsl(224, 28%, 35%),
+    eval-key-toggle-bg: hsl(6, 63%, 50%),
+    eval-key-toggle-shadow: hsl(6, 70%, 34%),
+    key-bg: hsl(30, 25%, 89%),
+    key-shadow: hsl(28, 16%, 65%),
+    text-white: hsl(0, 0%, 100%),
+    text-dark: hsl(221, 14%, 31%)
+);
+
+$theme2: (
+    main-background: hsl(0, 0%, 90%),
+    toggle-keypad-bg: hsl(0, 5%, 81%),
+    screen-bg: hsl(0, 0%, 93%),
+    act-key-bg: hsl(185, 42%, 37%),
+    act-key-shadow: hsl(185, 58%, 25%),
+    eval-key-toggle-bg: hsl(25, 98%, 40%),
+    eval-key-toggle-shadow: hsl(25, 99%, 27%),
+    key-bg: hsl(45, 7%, 89%),
+    key-shadow: hsl(35, 11%, 61%),
+    text-white: hsl(0, 0%, 100%),
+    text-dark: hsl(60, 10%, 19%)
+);
+
+$theme3: (
+    main-background: hsl(268, 75%, 9%),
+    toggle-keypad-bg: hsl(268, 71%, 12%),
+    screen-bg: hsl(268, 71%, 12%),
+    act-key-bg: hsl(281, 89%, 26%),
+    act-key-shadow: hsl(285, 91%, 52%),
+    eval-key-toggle-bg: hsl(176, 100%, 44%),
+    eval-key-toggle-shadow: hsl(177, 92%, 70%),
+    key-bg: hsl(268, 47%, 21%),
+    key-shadow: hsl(290, 70%, 36%),
+    text-white: hsl(0, 0%, 100%),
+    text-dark: hsl(198, 20%, 13%),
+    text-light: hsl(52, 100%, 62%)
+);

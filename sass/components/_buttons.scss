@@ -1,0 +1,23 @@
+.key{
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    padding: .75rem .5rem;
+    font-size: 1.25rem;
+    border-radius: .5rem;
+    border: none;
+    transition: background-color .3s ease;
+
+    &.num{
+        font-size: $primary-font-size;
+    }
+
+    @include mobile{
+        padding: 1rem .1rem;
+    }
+
+    &.action-key, &.eval-key{
+        font-size: 1.25rem;
+    }
+}
