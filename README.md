@@ -15,8 +15,6 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 One of those Stubborn projects 😪
 
@@ -68,4 +66,4 @@ I would like to:
 ## Author
 
 - Github - [Opeoluwa Ogunlaja](https://github.com/Opeoluwa-Ogunlaja)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/opeoluwa-ogunlaja)
+- Frontend Mentor - [@Opeoluwa-Ogunlaja](https://www.frontendmentor.io/profile/opeoluwa-ogunlaja)
