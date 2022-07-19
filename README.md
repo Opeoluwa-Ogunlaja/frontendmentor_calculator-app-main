@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My Solution](https://your-solution-url.com)
-- Live Site URL: [Live site](https://your-live-site-url.com)
+- Solution URL: [My Solution](https://www.frontendmentor.io/solutions/calculator-app-Dr_HtyD2-q)
+- Live Site URL: [Live site](https://opeoluwa-ogunlaja.github.io/frontendmentor_calculator-app-main/)
 
 ## My process
 
